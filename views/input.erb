@@ -1,1 +1,33 @@
 <%= @hello %>
+
+<% @list.each do |contact| %>
+<h4> <a href ="/contacts/<%=contact.id %>"><%= contact.first_name %> <%= contact.last_name %></a>
+</h4>
+<% end %>
+
+<p>add contact info here</p>
+
+<form action="/" method="post">
+  <div class="form-group">
+    <label for="first_name">First Name</label>
+    <input id="first_name" name="first_name" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="last_name">Last Name</label>
+    <input id="last_name" name="last_name" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="job_title">Job Title</label>
+    <input id="job_title" name="job_title" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="company">Company</label>
+    <input id="company" name="company" class="form-control" type="text">
+  </div>
+  <div class="form-group">
+    <label for="contact_type">Contact Type</label>
+    <input id="contact_type" name="contact_type" class="form-control" type="text">
+  </div>
+
+  <button type="submit" class="btn">Go!</button>
+</form>

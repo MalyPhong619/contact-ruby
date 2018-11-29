@@ -4,3 +4,5 @@ friend.store(:last_name,"chris")
 friend.store(:job_title,"worker")
 friend.store(:company,"company")
 friend.store(:contact_type,"buddy")
+
+friend = Contact.new({:first_name=>"chris", :last_name=>"cahill", :job_title=>"worker", :company=>"company", :contact_type=>"buddy"})
