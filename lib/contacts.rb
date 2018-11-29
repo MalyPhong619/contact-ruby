@@ -16,7 +16,7 @@ class Contact
   end
 
   def self.all()
-   @@list
+   @@list.sort_by { |contact| [contact.last_name, contact.first_name]}
   end
 
   def save()

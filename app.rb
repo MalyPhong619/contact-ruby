@@ -20,7 +20,7 @@ post ('/') do
   contact = Contact.new(:first_name=>first_name, :last_name=>last_name, :job_title=>job_title, :company=>company, :contact_type=>contact_type)
   contact.save()
   @list = Contact.all()
-  binding.pry
+  # binding.pry
   erb(:input)
 end
 
