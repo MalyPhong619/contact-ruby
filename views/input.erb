@@ -1,7 +1,8 @@
 <%= @hello %>
 
+<h2>Contacts Sorted By First Name</h2>
 <% @list.each do |contact| %>
-<h4> <a href ="/contacts/<%=contact.id %>"><%= contact.first_name %> <%= contact.last_name %></a>
+<h4> <a href ="/contacts/<%=contact.id %>"><%= contact.first_name %></a>
 </h4>
 <% end %>
 
