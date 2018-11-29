@@ -17,7 +17,8 @@ post ('/') do
   job_title = params["job_title"]
   company = params["company"]
   contact_type = params["contact_type"]
-  contact = Contact.new(:first_name=>first_name, :last_name=>last_name, :job_title=>job_title, :company=>company, :contact_type=>contact_type)
+  email = ''
+  contact = Contact.new(:first_name=>first_name, :last_name=>last_name, :job_title=>job_title, :company=>company, :contact_type=>contact_type, :email=>email)
   contact.save()
   @list = Contact.all()
   # binding.pry
@@ -31,11 +32,13 @@ get ('/contacts/:id') do
 end
 
 post ('/contacts/:id') do
-  first_name = params["first_name"]
-  last_name = params["last_name"]
   @contact = Contact.find(params[:id])
+  first_name = params["first"]
+  last_name = params["last"]
+  email = params["email"]
   @contact.first_name = first_name
   @contact.last_name = last_name
+  @contact.email = email
   erb(:contact)
 end
 

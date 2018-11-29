@@ -2,7 +2,7 @@ class Contact
   @@list = []
   @@counter = 1
 
-  attr_accessor :first_name, :last_name, :job_title, :company, :contact_type, :id
+  attr_accessor :first_name, :last_name, :job_title, :company, :contact_type, :id, :email
 
   def initialize(attributes)
     @first_name = attributes.fetch(:first_name)
@@ -10,7 +10,7 @@ class Contact
     @job_title = attributes.fetch(:job_title)
     @company = attributes.fetch(:company)
     @contact_type = attributes.fetch(:contact_type)
-    # @id = attributes.fetch(:id)
+    @email = attributes.fetch(:email)
     @id = @@counter
     @@counter = @@counter + 1
   end
