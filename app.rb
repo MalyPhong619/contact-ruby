@@ -31,3 +31,8 @@ get ('/contacts/:id') do
   @list = Contact.all()
   erb(:contact)
 end
+
+get ('/whatever') do
+  @contact = "test page to see"
+  erb(:contact2)
+end
